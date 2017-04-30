@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="IntranetAnimaisDeRua" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.13" />
+        </element>
       </element>
     </root>
   </artifact>
