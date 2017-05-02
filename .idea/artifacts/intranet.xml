@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="IntranetAnimaisDeRua:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/IntranetAnimaisDeRua_war_exploded.war</output-path>
+  <artifact type="exploded-war" name="intranet">
+    <output-path>$PROJECT_DIR$/out/artifacts/intranet.war</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="IntranetAnimaisDeRua/web/Web" />
       <element id="directory" name="WEB-INF">
