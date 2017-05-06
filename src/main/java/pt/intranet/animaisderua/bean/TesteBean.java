@@ -7,6 +7,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by smorais on 02/05/2017.
@@ -18,10 +19,9 @@ public class TesteBean implements Serializable {
     private DAO<Projecto> dao;
 
     public void init(){
-        Projecto p = new Projecto();
-        p.setNome("TWSTE");
-        dao.save(p);
-        System.out.println("testeeee");
+        List<Projecto> projectos = dao.listAll();
+        System.out.println(projectos);
+
 
     }
 }

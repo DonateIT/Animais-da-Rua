@@ -4,6 +4,7 @@ import pt.intranet.animaisderua.persistence.daointerfaces.DAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 /**
@@ -33,11 +34,18 @@ public class DAOImpl<T> implements DAO {
 
     @Override
     public Object update(Object entity) {
-        return null;
+        em.merge(entity);
+        em.flush();
+        return entity;
+
     }
 
+
     @Override
-    public List listAll(Object entity) {
-        return null;
+    public List listAll() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Select e from ").append(this.classe.getSimpleName()).append(" e");
+        TypedQuery<T> query = em.createQuery(sb.toString(), this.classe);
+        return query.getResultList();
     }
 }
