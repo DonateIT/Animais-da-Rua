@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<queries>
+    <query id="searchProjectByName">
+        SELECT p from Projeto p
+    </query>
+    <query id="searchProjectByNameAndId">
+        SELECT p from Projeto p where nome like :nome and id = :id
+    </query>
+</queries>
